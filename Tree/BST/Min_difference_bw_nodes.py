@@ -1,4 +1,4 @@
-from sys import modules
+from sys import module
 from BST_creation import Node, PRINTTREE, CreateTree
 
 node = None
