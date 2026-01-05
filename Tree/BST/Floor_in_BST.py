@@ -40,5 +40,3 @@ ans = floorVal(root, key)
 
 PRINTTREE(root)
 print(f"\nFloor for {key} is ", ans)
-
-
