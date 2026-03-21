@@ -57,7 +57,7 @@ int main(){
 
     G.printGraph();
     cout<<"Now, BFS"<<endl;
-    BFS(G.adj, 12);
+    BFS(G.adj, 60);
 
     return 0;
 }
