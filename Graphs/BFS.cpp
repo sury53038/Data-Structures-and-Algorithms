@@ -20,7 +20,7 @@ class Graph{
             cout<<endl;
         }
         
-    }
+    }  
 };
 
 void BFS(map<int, list<int>>adj, int src){
@@ -61,4 +61,3 @@ int main(){
 
     return 0;
 }
-
