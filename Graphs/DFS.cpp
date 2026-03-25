@@ -21,7 +21,6 @@ class Graph{
                 }
                 cout<<endl;
             }
-            
         }
 };
 
