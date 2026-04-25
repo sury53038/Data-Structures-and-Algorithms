@@ -28,7 +28,7 @@ bool palindrome(int num){
         num = num/10;
     }
 
-    return !(val == original);
+    return (val != original);
 }
 
 bool repeatedDigits(int num){
@@ -45,8 +45,8 @@ bool repeatedDigits(int num){
 }
 
 int main(){
-    int num1 = 59;
-    int num2 = 980;
+    int num1 = 10;
+    int num2 = 100;
     cout<<"Output"<<endl;
 
     for(int i = num1; i <= num2; i++){
