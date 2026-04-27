@@ -30,3 +30,45 @@
 // Row 1 → replace 0 with 6 → [1,6,2] → sum = 9
 // Row 2 → replace 0 with 7 → [3,2,7] → sum = 12
 // Minimum = 9
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Size :: ";
+    cin>>n;
+
+    vector<int>cost(n);
+    for(int i = 0; i < n; i++){
+        cout<<"Cost["<<i<<"] "<<endl;
+        cin>>cost[i];
+    }
+    cout<<"Enter matrix :: "<<endl;
+    vector<vector<int>>matrix(n, vector<int>(n));
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> matrix[i][j];
+        }
+    }
+    cout<<"Matrix Input Complete "<<endl;
+
+    
+    int ans = INT_MAX;
+
+    for(int i = 0; i < n; i++){
+        int sum = 0;
+        for(int j = 0; j < n; j++){
+            if(matrix[i][j] == 0){
+                sum += cost[i];
+            }
+            else{
+                sum += matrix[i][j];
+            }
+        }
+        ans = min(ans, sum);
+    }
+    cout<<ans;
+
+    return 0;
+}
