@@ -37,7 +37,24 @@
 // Output
 // 36.5625 63.4375
 
-// Explanation
-// We apply the transitions 4 times using:
-// newHappy = 0.3 * Happy + 0.5 * Sad
-// newSad = 0.7 * Happy + 0.5 * Sad
+#include<iostream>
+using namespace std;
+
+int main(){
+    double N;
+    cin>>N;
+    
+    double happy = N;
+    double sad = 0;
+
+    for(int i = 0; i < 4; i++){
+       double nh = 0.3 * happy + 0.5 * sad;
+       double ns = 0.7 * happy + 0.5 * sad;
+
+       happy = nh;
+       sad = ns;
+    }
+    cout<<happy<<" "<<sad;
+    return 0;
+}
+
